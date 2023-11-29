@@ -14,11 +14,12 @@ class CityModel {
   });
 
   factory CityModel.fromJson(Map<String, dynamic> json) {
-    return CityModel(
-      name: json["name"], 
-      latitude: json["latitude"], 
-      longitude: json["longitude"], 
-      country: json["country"]
-    );
+      return CityModel(
+        name: json["name"], 
+        latitude: json["lat"], 
+        longitude: json["lon"], 
+        country: json["country"],
+        state: json["state"] ?? ""
+      );
   }
 }
